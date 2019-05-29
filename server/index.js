@@ -18,7 +18,7 @@ app.get('/', (request, response) => {
   response.status(200).send('Testing Sequelize');
 });
 
-app.get('*', (requesst, response) => {
+app.get('*', (request, response) => {
   response.status(404).send('Not Found');
 });
 
