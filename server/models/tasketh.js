@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable
 module.exports = (sequelize, DataTypes) => {
   const tasketh = sequelize.define('tasketh', {

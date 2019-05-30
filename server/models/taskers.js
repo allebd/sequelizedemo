@@ -1,10 +1,11 @@
-'use strict';
+
+
 module.exports = (sequelize, DataTypes) => {
   const taskers = sequelize.define('taskers', {
     title: DataTypes.STRING,
-    iscompleted: DataTypes.BOOLEAN
+    iscompleted: DataTypes.BOOLEAN,
   }, {});
-  taskers.associate = function(models) {
+  taskers.associate = function (models) {
   };
   return taskers;
 };
