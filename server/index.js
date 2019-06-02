@@ -2,6 +2,48 @@ import express, { json, urlencoded } from 'express';
 import { config } from 'dotenv';
 import logger from 'morgan';
 import cors from 'cors';
+import models from './models';
+
+const task = models.Task.build({
+  title: 'mow the lawn',
+  iscompleted: false,
+});
+
+// delete the task
+// models.Task.destroy({
+//   where: {
+//     title: 'mow the lawn',
+//   },
+// }).then((task) => {
+
+// });
+
+// models.Task.findAll().then((task) => {
+//   console.log(task);
+// });
+
+// models.Task.findByPk(30).then((task) => {
+//   console.log(task);
+// });
+
+//  fetch a particular task
+// models.Task.findOne({
+//   where: {
+//     title: 'mow the land',
+//   },
+// }).then((task) => {
+//   console.log(task);
+// });
+
+// saving a new task
+// task.save().then((newTask) => {
+//   console.log(newTask);
+// });
+
+//  Plain findOne method with no filter
+// models.Task.findOne().then((task) => {
+//   console.log(task);
+// });
 
 config();
 
