@@ -5,7 +5,7 @@ import cors from 'cors';
 import models from './models';
 
 const task = models.Task.build({
-  title: 'mow the lawn',
+  title: 'feed the dog',
   iscompleted: false,
 });
 
@@ -18,9 +18,11 @@ const task = models.Task.build({
 
 // });
 
-// models.Task.findAll().then((task) => {
-//   console.log(task);
-// });
+models.Task.findAll().then((task) => {
+  const [Task] = task;
+  const { title } = Task;
+  console.log(title);
+});
 
 // models.Task.findByPk(30).then((task) => {
 //   console.log(task);
