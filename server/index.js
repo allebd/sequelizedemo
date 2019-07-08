@@ -24,6 +24,11 @@ models.Task.findAll().then((task) => {
   console.log(title);
 });
 
+// saving a new task
+task.save().then((newTask) => {
+  console.log(newTask);
+});
+
 // models.Task.findByPk(30).then((task) => {
 //   console.log(task);
 // });
@@ -35,11 +40,6 @@ models.Task.findAll().then((task) => {
 //   },
 // }).then((task) => {
 //   console.log(task);
-// });
-
-// saving a new task
-// task.save().then((newTask) => {
-//   console.log(newTask);
 // });
 
 //  Plain findOne method with no filter
